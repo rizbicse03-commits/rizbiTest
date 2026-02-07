@@ -51,6 +51,13 @@ class PortfolioData {
         this.updateElement('linkedin-link', 'LinkedIn', 'href', personal.social.linkedin);
         this.updateElement('github-link', 'GitHub', 'href', personal.social.github);
         
+        // Update resume download link
+        const resumeBtn = document.getElementById('download-resume');
+        if (resumeBtn && personal.resume) {
+            resumeBtn.href = personal.resume;
+            resumeBtn.download = 'Rizbi_Islam_Resume.pdf';
+        }
+        
         // Update email tracking link
         const emailLink = document.getElementById('email-tracked');
         if (emailLink) {
